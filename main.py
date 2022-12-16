@@ -15,10 +15,16 @@ def read_root():
     return {"Hello:world"}
 
 
-@app.get("/page_one")
+@app.get("/page_one/")
 def another_page():
     return {
         "page_one": "That page number one!"
+    }
+
+@app.get("/ping/")
+def another_page():
+    return {
+        "message": "pong"
     }
 
 
