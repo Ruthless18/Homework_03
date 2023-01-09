@@ -2,7 +2,7 @@ FROM python:3.10.8-bullseye
 
 ENV PYTHONUNBUFFERED=1
 
-WORKDIR /app
+WORKDIR var/app
 
 RUN pip install --upgrade pip
 RUN pip install poetry
@@ -12,7 +12,7 @@ COPY pyproject.toml poetry.lock ./
 
 RUN poetry install --only main
 
-COPY . .
+COPY .. .
 
 EXPOSE 8000
 

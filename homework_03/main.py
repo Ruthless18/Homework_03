@@ -18,13 +18,13 @@ def read_root():
 @app.get("/page_one/")
 def another_page():
     return {
-        "page_one": "That page number one!"
+        "page_one": "That page number one!",
     }
 
 @app.get("/ping/")
 def another_page():
     return {
-        "message": "pong"
+        "message": "pong",
     }
 
 
